@@ -33,12 +33,12 @@ addContent = e => {
     const initial = website.slice(0,1).toUpperCase()
     const classValue = colorList[Math.floor(Math.random()*5)]
     const newValues = {
-        id: v4();
+        id: v4(),
         initialValue:initial,
         websiteName:website,
-        username:username,
-        password:password,
-        classAdd:classValue;
+        userName:username,
+        Password:password,
+        classAdd:classValue,
     }
 
     this.setState(prevState => ({
@@ -146,7 +146,7 @@ render() {
                                         {isShow && <p className = "website"> {eachValue.password}</p>}
                                     </div>
                                     <button type = "button" className = "del-btn" onClick = {()=> this.deleteItem(eachValue.id)}
-                                    testid = "delete">"
+                                    testid = "delete">
                                         <img src = "https://assests.ccbp.in/frontend/react-js/password-manager-delete-img.png" className ="del-image" alt ="delete"/>
                                     </button>
                                     </li> 
